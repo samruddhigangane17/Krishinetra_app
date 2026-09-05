@@ -1,0 +1,106 @@
+KrishiNetra — PART 2 (UI/UX-polished build)
+=============================================
+
+IMPORTANT: The commands below were NOT run as part of producing this
+package — the environment used to prepare this ZIP does not have the
+Flutter/Dart SDK installed and has no network access to install one.
+You must run these yourself on a machine that has Flutter installed
+(the project targets Flutter >=3.27.0, Dart >=3.6.0) before treating
+this build as verified.
+
+From the project root (the folder containing pubspec.yaml):
+
+    flutter pub get
+    flutter analyze
+    flutter build web
+    flutter run -d chrome
+
+What changed vs. PART 1
+------------------------
+Only the UI/visual layer was touched, using the attached "polished"
+KrishiNetra project purely as a style reference (colors, typography,
+spacing, cards, buttons, navigation). No functional/architectural
+changes were made and no API keys were copied from the reference.
+
+Files edited:
+  - lib/core/theme/app_theme.dart        (Google Fonts + richer theming)
+  - lib/features/dashboard/dashboard_shell.dart   (Home/History/Profile restyle)
+  - lib/features/landing/landing_page.dart        (gradient hero band)
+  - lib/features/auth/presentation/pages/splash_screen.dart (theme-driven type)
+  - pubspec.yaml                          (added google_fonts, intl)
+
+Everything else — authentication, language selection, soil analysis,
+Gemini/offline AI recommendations, fertilizer history and
+fertilizer-aware recommendations, organic alternatives, report
+history, and existing navigation — is unchanged from PART 1.
+
+If `flutter analyze` or `flutter build web` reports issues, they will
+most likely be minor and mechanical (e.g. a lint nit or a Flutter-
+version-specific API name) — please fix only what's necessary to get
+a clean build without altering functionality or the UI direction
+established here.
+
+Sarvam AI integration (this pass)
+----------------------------------
+Real translation via Sarvam AI's official `/translate` REST endpoint is
+now wired in behind the existing translation architecture. It needs one
+environment variable, supplied via `--dart-define` (never hardcoded):
+
+    flutter pub get
+    flutter run --dart-define=SARVAM_API_KEY=your_sarvam_key
+    # or, for a web/release build:
+    flutter build web --dart-define=SARVAM_API_KEY=your_sarvam_key
+
+Get a key from https://dashboard.sarvam.ai. If `SARVAM_API_KEY` isn't
+supplied, `SarvamTranslationService.isConfigured` is `false` and the app
+falls back to Bhashini (if configured), then to the original English
+text — the app runs exactly as before with no key set.
+
+See `docs/SARVAM_INTEGRATION.md` for the full detail: files changed,
+where Sarvam is called from, caching/timeout/error-handling behaviour,
+and what remains out of scope for this pass.
+
+Part 4 (verification + API-key fix)
+------------------------------------
+The Sarvam integration above was verified against the actual code (not
+just the doc) and the previously-flagged hardcoded Gemini API key
+(`kGeminiApiKey` in `gemini_service.dart`) was removed — it now only
+resolves from `--dart-define=GEMINI_API_KEY=...`, matching how
+`SARVAM_API_KEY` already worked. No other behavior changed. Run with
+both keys to exercise the full online path:
+
+    flutter run --dart-define=SARVAM_API_KEY=your_sarvam_key --dart-define=GEMINI_API_KEY=your_gemini_key
+
+See `docs/PART4_VERIFICATION.md` for the full verification checklist.
+
+Part 5 (Sarvam integration tests + fallback-chain fix)
+-------------------------------------------------------
+Added `flutter_test`-based unit tests for the Sarvam/Bhashini/translation
+fallback chain, and fixed a gap found while writing them: Bhashini's own
+free (no-signup) fallback was being skipped whenever real Bhashini
+credentials weren't set, because `TranslationService` gated the call
+behind `bhashiniTranslationService.isConfigured` instead of letting
+Bhashini handle that case itself (which it already does). Run the suite:
+
+    flutter pub get
+    flutter test
+    # or, to also exercise a live Sarvam call:
+    flutter test --dart-define=SARVAM_API_KEY=your_sarvam_key
+
+See `docs/PART5_TESTING.md` for the full test list and what was fixed.
+
+Part 6 (centralized language-selection system)
+------------------------------------------------
+Added `lib/core/services/language_manager.dart` — a single
+LanguageManager (`languageManager`) that now owns the farmer's selected
+language app-wide: live state via a ValueNotifier, persisted via
+shared_preferences (new dependency), restored on startup with English as
+the default. LanguageSelectionScreen, LandingPage, and DashboardShell no
+longer manually relay a LanguageOption through their constructors/
+navigation callbacks — they read/write languageManager instead. No
+screen's UI or navigation changed. Run:
+
+    flutter pub get
+    flutter test
+
+See `docs/PART6_LANGUAGE_MANAGER.md` for the full detail.

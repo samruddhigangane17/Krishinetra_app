@@ -1,0 +1,45 @@
+name: krishinetra
+description: KrishiNetra — Offline-First Soil Intelligence Platform.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+  # app_theme.dart uses CardThemeData (ThemeData.cardTheme), which only
+  # exists from Flutter 3.27 onward — building against an older Flutter
+  # would fail with "CardThemeData isn't defined" or a type mismatch.
+  flutter: '>=3.27.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.1.2
+  http: ^1.2.2
+  google_fonts: ^6.2.1
+  intl: ^0.20.2
+  # Used only by lib/core/services/language_manager.dart to persist the
+  # farmer's selected language across app restarts (key-value only, no
+  # other storage need exists in the app).
+  shared_preferences: ^2.3.2
+  # Powers the report screen's "Listen to Report" button — reads the
+  # report aloud using the device's own on-device TTS engine in the
+  # farmer's selected language, no API key or network needed.
+  flutter_tts: ^4.2.0
+  # Device location for the real weather forecast (see
+  # lib/core/services/weather_service.dart). Supports Flutter Web out of
+  # the box via the browser's Geolocation API — no platform manifest
+  # changes needed for the web build this project currently ships.
+  geolocator: ^13.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/

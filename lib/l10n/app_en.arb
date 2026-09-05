@@ -1,0 +1,250 @@
+{
+  "@@locale": "en",
+  "splashTagline": "Offline-First Soil Intelligence Platform",
+  "@splashTagline": {
+    "description": "Tagline shown under the logo on the splash screen"
+  },
+  "landingSubtitle": "AI-powered soil and crop intelligence for smarter farming.",
+  "@landingSubtitle": {
+    "description": "Subtitle under the app name on the landing/marketing screen"
+  },
+  "featureSoilAnalysis": "Soil Analysis",
+  "@featureSoilAnalysis": {
+    "description": "Landing screen feature chip"
+  },
+  "featureAiRecommendations": "AI Recommendations",
+  "@featureAiRecommendations": {
+    "description": "Landing screen feature chip"
+  },
+  "featureOrganicAlternatives": "Organic Alternatives",
+  "@featureOrganicAlternatives": {
+    "description": "Landing screen feature chip"
+  },
+  "getStarted": "Get Started",
+  "@getStarted": {
+    "description": "Landing screen primary CTA button"
+  },
+  "chooseYourLanguage": "Select Your Preferred Language",
+  "@chooseYourLanguage": {
+    "description": "Language selection screen heading, shown in the active/native language"
+  },
+  "changeAnytimeHint": "You can change this anytime from Settings.",
+  "@changeAnytimeHint": {
+    "description": "Language selection screen helper text"
+  },
+  "continueLabel": "Continue",
+  "@continueLabel": {
+    "description": "Language selection screen continue button"
+  },
+  "welcomeFarmer": "Welcome Farmer",
+  "@welcomeFarmer": {
+    "description": "Login screen greeting under the app name"
+  },
+  "phoneNumberLabel": "Phone Number",
+  "@phoneNumberLabel": {
+    "description": "Login screen phone number field label"
+  },
+  "getOtp": "Get OTP",
+  "@getOtp": {
+    "description": "Login screen button to request an OTP"
+  },
+  "enterOtp": "Enter OTP",
+  "@enterOtp": {
+    "description": "Login screen OTP field label"
+  },
+  "verifyAndProceed": "Verify & Proceed",
+  "@verifyAndProceed": {
+    "description": "Login screen OTP verify button"
+  },
+  "resendOtpIn": "Resend OTP in 0:{seconds}",
+  "@resendOtpIn": {
+    "description": "Countdown before OTP can be resent. {seconds} placeholder",
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
+  "resendOtp": "Resend OTP",
+  "@resendOtp": {
+    "description": "Resend OTP button/label"
+  },
+  "orDivider": "OR",
+  "@orDivider": {
+    "description": "Divider word between phone login and Google sign-in"
+  },
+  "signInWithGoogle": "Sign in with Google",
+  "@signInWithGoogle": {
+    "description": "Google sign-in button"
+  },
+  "skipGuestMode": "Skip for Now (Offline Guest Mode)",
+  "@skipGuestMode": {
+    "description": "Guest/offline mode button"
+  },
+  "codeSentTo": "Code sent to {phone}",
+  "@codeSentTo": {
+    "description": "Banner confirming OTP was sent. {phone} placeholder",
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "Edit phone number link"
+  },
+  "errorOtpSendFailed": "Could not send OTP right now. Check your connection or continue as guest.",
+  "@errorOtpSendFailed": {
+    "description": "Error when OTP could not be sent"
+  },
+  "errorOtpIncomplete": "Enter the complete 6-digit code.",
+  "@errorOtpIncomplete": {
+    "description": "Error when OTP code is incomplete"
+  },
+  "errorVerificationFailed": "Verification failed. Please try again.",
+  "@errorVerificationFailed": {
+    "description": "Error when OTP verification fails"
+  },
+  "errorGoogleUnavailable": "Google sign-in is unavailable right now. Try phone login or continue as guest.",
+  "@errorGoogleUnavailable": {
+    "description": "Error when Google sign-in is unavailable"
+  },
+  "navHome": "Home",
+  "@navHome": {
+    "description": "Bottom navigation / rail label"
+  },
+  "navScan": "Scan",
+  "@navScan": {
+    "description": "Bottom navigation / rail label"
+  },
+  "navChat": "Chat",
+  "@navChat": {
+    "description": "Bottom navigation / rail label"
+  },
+  "navSchemes": "Schemes",
+  "@navSchemes": {
+    "description": "Bottom navigation / rail label"
+  },
+  "navHistory": "History",
+  "@navHistory": {
+    "description": "Bottom navigation / rail label"
+  },
+  "navProfile": "Profile",
+  "@navProfile": {
+    "description": "Bottom navigation / rail label"
+  },
+  "welcomeBack": "Welcome back, {name}",
+  "@welcomeBack": {
+    "description": "Dashboard home greeting. {name} placeholder",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "aiPoweredBadge": "AI-powered",
+  "@aiPoweredBadge": {
+    "description": "Small badge on the home hero card"
+  },
+  "checkSoilHealth": "Check your soil health",
+  "@checkSoilHealth": {
+    "description": "Home hero card heading"
+  },
+  "soilHealthDescription": "Enter N, P, K and pH values or upload a crop/soil photo — get an instant AI diagnosis.",
+  "@soilHealthDescription": {
+    "description": "Home hero card description"
+  },
+  "startScan": "Start Scan",
+  "@startScan": {
+    "description": "Home hero card CTA button"
+  },
+  "savedReportsLabel": "Saved reports",
+  "@savedReportsLabel": {
+    "description": "Home stat card / profile row label"
+  },
+  "offlineValue": "Offline",
+  "@offlineValue": {
+    "description": "Home stat card value showing offline fallback is ready"
+  },
+  "fallbackReady": "Fallback ready",
+  "@fallbackReady": {
+    "description": "Home stat card label"
+  },
+  "whatYouGet": "What you get",
+  "@whatYouGet": {
+    "description": "Home section heading"
+  },
+  "aiAnalysisTitle": "AI analysis",
+  "@aiAnalysisTitle": {
+    "description": "Home info card title"
+  },
+  "aiAnalysisText": "Gemini-powered insights with an offline fallback engine, so you always get a result.",
+  "@aiAnalysisText": {
+    "description": "Home info card description"
+  },
+  "organicOptionsTitle": "Organic options",
+  "@organicOptionsTitle": {
+    "description": "Home info card title"
+  },
+  "organicOptionsText": "Practical, low-cost organic alternatives are included alongside every fertilizer plan.",
+  "@organicOptionsText": {
+    "description": "Home info card description"
+  },
+  "scanHistoryTitle": "Scan History",
+  "@scanHistoryTitle": {
+    "description": "History tab header subtitle"
+  },
+  "noSavedReports": "No saved soil reports yet",
+  "@noSavedReports": {
+    "description": "History tab empty state title"
+  },
+  "noSavedReportsHint": "Reports you save from a scan will appear here.",
+  "@noSavedReportsHint": {
+    "description": "History tab empty state description"
+  },
+  "statusOptimal": "Optimal",
+  "@statusOptimal": {
+    "description": "Soil health status label"
+  },
+  "statusModerateDeficit": "Moderate Deficit",
+  "@statusModerateDeficit": {
+    "description": "Soil health status label"
+  },
+  "statusCriticalDeficit": "Critical Deficit",
+  "@statusCriticalDeficit": {
+    "description": "Soil health status label"
+  },
+  "offlineGuestModeChip": "Offline Guest Mode",
+  "@offlineGuestModeChip": {
+    "description": "Profile tab guest badge"
+  },
+  "phoneLabel": "Phone",
+  "@phoneLabel": {
+    "description": "Profile tab row label"
+  },
+  "emailLabel": "Email",
+  "@emailLabel": {
+    "description": "Profile tab row label"
+  },
+  "languageLabel": "Language",
+  "@languageLabel": {
+    "description": "Profile/settings row label"
+  },
+  "changeLanguage": "Change Language",
+  "@changeLanguage": {
+    "description": "Language picker bottom sheet title (settings)"
+  },
+  "signOut": "Sign out",
+  "@signOut": {
+    "description": "Profile/settings sign out button"
+  },
+  "guestFarmerName": "Guest Farmer",
+  "@guestFarmerName": {
+    "description": "Fallback display name for guest users"
+  },
+  "farmerNameFallback": "Farmer",
+  "@farmerNameFallback": {
+    "description": "Fallback display name for signed-in users with no name"
+  }
+}
