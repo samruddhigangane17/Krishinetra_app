@@ -3,42 +3,37 @@
 **An offline-first, multilingual soil intelligence app for Indian farmers.**
 Scan a crop or soil photo, enter soil readings, and get a health score, crop suitability, a fertilizer plan, weather-aware advice and matching government schemes, in your own language, with voice read-out.
 
-> Built with Flutter (Web). Works without any API key using a local rule-based engine; gets smarter when a Gemini key is configured.
 
-<!-- Add a live link and screenshots once you have them:
-**Live demo:** https://your-app.web.app
-![Home](docs/screenshots/home.png)
--->
+Live demo:https://krishinetra-web-app.web.app
+<img width="1535" height="735" alt="image" src="https://github.com/user-attachments/assets/a7738aee-f578-4869-967a-4c14bbab4423" />
+<img width="1535" height="730" alt="image" src="https://github.com/user-attachments/assets/fe796d6e-a9c5-4e03-8e2d-76f012e0abca" />
+<img width="1535" height="715" alt="image" src="https://github.com/user-attachments/assets/73a9b8a6-63ed-48b3-9893-6382ac084f10" />
 
+
+✨ Features
+
+
+Soil scan	Photo + optional N, P, K, pH, moisture, crop stage, organic-input question
+Soil health score	0–100 score with colour-coded bars per parameter
+Crop suitability	Best-fit crop plus alternatives, scored against N/P/K/pH ranges
+What your soil needs	Primary issue plus plain-language impact
+Action plan & fertilizer table	4-step plan, and Increase / Maintain / Reduce per nutrient with a "Why?"
+Weather-aware advice	Real forecast for your location, e.g. "Rain expected tomorrow, consider delaying fertilizer"
+Listen to Report	On-device text-to-speech in the selected language
+Government schemes	100 Maharashtra schemes with search, category and government filters, plus Recommended For You matched to your soil report with reasons
+Farmer profile	Name, state, district, land size, crops, standing organic-input preference
+History & trends	Soil-health trend chart that survives app restarts
+7 languages	English, Hindi, Marathi, Kannada, Tamil, Gujarati, Telugu
 ---
 
-## ✨ Features
-
-| Area | What it does |
-|---|---|
-| **Soil scan** | Photo + optional N, P, K, pH, moisture, crop stage, organic-input question |
-| **Soil health score** | 0–100 score with colour-coded bars per parameter |
-| **Crop suitability** | Best-fit crop plus alternatives, scored against N/P/K/pH ranges |
-| **What your soil needs** | Primary issue plus plain-language impact |
-| **Action plan & fertilizer table** | 4-step plan, and Increase / Maintain / Reduce per nutrient with a "Why?" |
-| **Weather-aware advice** | Real forecast for your location, e.g. "Rain expected tomorrow, consider delaying fertilizer" |
-| **Listen to Report** | On-device text-to-speech in the selected language |
-| **Government schemes** | 100 Maharashtra schemes with search, category and government filters, plus **Recommended For You** matched to your soil report with reasons |
-| **Farmer profile** | Name, state, district, land size, crops, standing organic-input preference |
-| **History & trends** | Soil-health trend chart that survives app restarts |
-| **7 languages** | English, Hindi, Marathi, Kannada, Tamil, Gujarati, Telugu |
-
----
-
-## 🧠 How the intelligence works
+## How the intelligence works
 
 KrishiNetra is **hybrid by design**:
 
-- **Local rule-based engines (no key needed):** health scoring, crop suitability, primary-issue detection, fertilizer dosing, weather advisories and scheme matching are all deterministic and reproducible.
-- **Gemini (optional):** if an API key is configured, Gemini analyses the photo (disease/pest detection) and writes the agronomist summary. Without a key the app falls back to the local engine and never hard-fails.
-- **Translation:** static UI strings are pre-translated (works offline). Dynamically generated text (AI summaries, chat) is translated at runtime via Sarvam, with Bhashini as fallback.
+- Local rule-based engines (no key needed): health scoring, crop suitability, primary-issue detection, fertilizer dosing, weather advisories and scheme matching are all deterministic and reproducible.
+- Gemini (optional): if an API key is configured, Gemini analyses the photo (disease/pest detection) and writes the agronomist summary. Without a key the app falls back to the local engine and never hard-fails.
+- Translation: static UI strings are pre-translated (works offline). Dynamically generated text (AI summaries, chat) is translated at runtime via Sarvam, with Bhashini as fallback.
 
----
 
 ## 🛠 Tech stack
 
@@ -132,18 +127,3 @@ This regenerates `lib/l10n/*`. Don't edit the generated files directly.
 - Authentication is a local demo implementation, not a production identity provider.
 - Fertilizer quantities are rule-of-thumb estimates; confirm with a local agronomist or Krishi Vigyan Kendra.
 
----
-
-## 🗺 Roadmap
-
-- Persist full reports (so scheme matching survives restarts)
-- Localize remaining screens
-- Multi-field support
-- Scheme data for more states
-- Real authentication and a backend
-
----
-
-## 📄 License
-
-Add a license here (for example MIT) or state that all rights are reserved.
