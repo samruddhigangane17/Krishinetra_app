@@ -29,6 +29,7 @@ PLACEHOLDER_KEYS = {
     "resendOtpIn": "seconds",
     "codeSentTo": "phone",
     "welcomeBack": "name",
+    "schemesStateMismatchWarning": "state",
 }
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "lib", "l10n")

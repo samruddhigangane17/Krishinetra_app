@@ -7,6 +7,8 @@ import 'package:krishinetra/core/services/weather_service.dart';
 import 'package:krishinetra/core/theme/app_theme.dart';
 import 'package:krishinetra/features/auth/domain/models/language_model.dart';
 import 'package:krishinetra/features/chatbot/presentation/pages/chatbot_screen.dart';
+import 'package:krishinetra/features/profile/data/farmer_profile_service.dart';
+import 'package:krishinetra/features/profile/presentation/pages/farmer_profile_screen.dart';
 import 'package:krishinetra/features/recommendation/domain/models/soil_models.dart';
 import 'package:krishinetra/features/recommendation/presentation/pages/recommendation_report_screen.dart';
 import 'package:krishinetra/features/recommendation/presentation/pages/soil_scan_screen.dart';
@@ -49,6 +51,8 @@ class _DashboardShellState extends State<DashboardShell> {
   ];
 
   String _name(AppLocalizations l10n) {
+    final String? profileName = farmerProfileService.profile?.name?.trim();
+    if (profileName != null && profileName.isNotEmpty) return profileName;
     final display = widget.authUser.displayName?.trim();
     if (display != null && display.isNotEmpty) return display;
     if (widget.authUser.isGuest) return l10n.guestFarmerName;
@@ -74,7 +78,7 @@ class _DashboardShellState extends State<DashboardShell> {
       case 7:
         return const _Weather();
       case 8:
-        return _Profile(
+        return FarmerProfileScreen(
           user: widget.authUser,
           onSignOut: widget.onSignOut,
           currentLanguage: language,
@@ -1191,16 +1195,6 @@ class _WeatherState extends State<_Weather> {
       ),
     );
   }
-}
-
-class _Profile extends StatelessWidget {
-  const _Profile({required this.user, required this.onSignOut, required this.currentLanguage, required this.onLanguageChanged});
-  final AuthUser user;
-  final VoidCallback onSignOut;
-  final LanguageOption currentLanguage;
-  final ValueChanged<LanguageOption> onLanguageChanged;
-  @override
-  Widget build(BuildContext context) => _PageFrame(title: 'Profile & Settings', subtitle: 'Manage your farmer profile and app preferences.', child: Column(children: [_SectionCard(title: 'Farmer Profile', child: ListTile(contentPadding: EdgeInsets.zero, leading: const CircleAvatar(radius: 26, backgroundColor: AppColors.surfaceContainerLow, child: Icon(Icons.person_rounded, color: AppColors.primary)), title: Text(user.displayName ?? 'Farmer', style: const TextStyle(fontWeight: FontWeight.w900)), subtitle: Text(user.isGuest ? 'Offline Guest Mode' : (user.phoneNumber ?? 'Signed in')), trailing: FilledButton(onPressed: onSignOut, child: const Text('Sign out')))), const SizedBox(height: 16), _SectionCard(title: 'Language', child: DropdownButtonFormField<LanguageOption>(initialValue: currentLanguage, decoration: const InputDecoration(prefixIcon: Icon(Icons.language_rounded), labelText: 'App language'), items: LanguageOption.supported.map((l) => DropdownMenuItem(value: l, child: Text(l.nativeName))).toList(), onChanged: (value) { if (value != null) onLanguageChanged(value); }))]));
 }
 
 class _EmptyState extends StatelessWidget {

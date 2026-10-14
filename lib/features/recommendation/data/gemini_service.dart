@@ -18,7 +18,7 @@ import 'package:krishinetra/features/recommendation/domain/models/soil_models.da
 /// supplied, [GeminiAgriService.isConfigured] is `false` and the app uses
 /// the offline rule-based engine instead, exactly as it does today when
 /// Gemini is unreachable.
-const String kGeminiApiKey = 'AQ.Ab8RN6KVlephQrgnbF_6lvy83AjrHhyUfGybmnbb9F7pQp66ow';
+const String kGeminiApiKey = '';
 
 /// One turn in a chatbot conversation — kept intentionally minimal since
 /// it only needs to round-trip back into the next prompt as plain text.

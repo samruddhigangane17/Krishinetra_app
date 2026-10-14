@@ -165,13 +165,13 @@
     },
     {
       "name": "geolocator_apple",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_apple-2.3.14",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_apple-2.3.15",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
       "name": "geolocator_platform_interface",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_platform_interface-4.3.0",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_platform_interface-4.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -213,13 +213,13 @@
     },
     {
       "name": "image_picker",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.2.3",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.2.4",
       "packageUri": "lib/",
-      "languageVersion": "3.10"
+      "languageVersion": "3.11"
     },
     {
       "name": "image_picker_android",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.13+22",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.13+25",
       "packageUri": "lib/",
       "languageVersion": "3.12"
     },
@@ -231,9 +231,9 @@
     },
     {
       "name": "image_picker_ios",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.13+7",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.13+10",
       "packageUri": "lib/",
-      "languageVersion": "3.10"
+      "languageVersion": "3.11"
     },
     {
       "name": "image_picker_linux",
@@ -249,9 +249,9 @@
     },
     {
       "name": "image_picker_platform_interface",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.11.1",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.11.2",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.11"
     },
     {
       "name": "image_picker_windows",
@@ -267,13 +267,13 @@
     },
     {
       "name": "jni",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/jni-1.0.3",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/jni-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "jni_flutter",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/jni_flutter-1.0.3",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/jni_flutter-1.0.4+1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -393,9 +393,9 @@
     },
     {
       "name": "platform",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.6",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.2.0",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.10"
     },
     {
       "name": "plugin_platform_interface",
@@ -417,9 +417,9 @@
     },
     {
       "name": "shared_preferences",
-      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.5.5",
+      "rootUri": "file:///C:/Users/Samruddhi%20G/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.5.6",
       "packageUri": "lib/",
-      "languageVersion": "3.9"
+      "languageVersion": "3.11"
     },
     {
       "name": "shared_preferences_android",

@@ -70,7 +70,7 @@
     },
     {
       "name": "shared_preferences",
-      "version": "2.5.5",
+      "version": "2.5.6",
       "dependencies": [
         "flutter",
         "shared_preferences_android",
@@ -112,7 +112,7 @@
     },
     {
       "name": "image_picker",
-      "version": "1.2.3",
+      "version": "1.2.4",
       "dependencies": [
         "flutter",
         "image_picker_android",
@@ -259,7 +259,7 @@
     },
     {
       "name": "geolocator_apple",
-      "version": "2.3.14",
+      "version": "2.3.15",
       "dependencies": [
         "flutter",
         "geolocator_platform_interface"
@@ -277,7 +277,7 @@
     },
     {
       "name": "geolocator_platform_interface",
-      "version": "4.3.0",
+      "version": "4.4.0",
       "dependencies": [
         "flutter",
         "meta",
@@ -406,7 +406,7 @@
     },
     {
       "name": "image_picker_platform_interface",
-      "version": "2.11.1",
+      "version": "2.11.2",
       "dependencies": [
         "cross_file",
         "flutter",
@@ -436,7 +436,7 @@
     },
     {
       "name": "image_picker_ios",
-      "version": "0.8.13+7",
+      "version": "0.8.13+10",
       "dependencies": [
         "flutter",
         "image_picker_platform_interface",
@@ -456,7 +456,7 @@
     },
     {
       "name": "image_picker_android",
-      "version": "0.8.13+22",
+      "version": "0.8.13+25",
       "dependencies": [
         "flutter",
         "flutter_plugin_android_lifecycle",
@@ -687,8 +687,10 @@
     },
     {
       "name": "platform",
-      "version": "3.1.6",
-      "dependencies": []
+      "version": "3.2.0",
+      "dependencies": [
+        "meta"
+      ]
     },
     {
       "name": "xdg_directories",
@@ -713,7 +715,7 @@
     },
     {
       "name": "jni_flutter",
-      "version": "1.0.3",
+      "version": "1.0.4+1",
       "dependencies": [
         "flutter",
         "jni"
@@ -721,7 +723,7 @@
     },
     {
       "name": "jni",
-      "version": "1.0.3",
+      "version": "1.1.0",
       "dependencies": [
         "args",
         "collection",

@@ -246,5 +246,89 @@
   "farmerNameFallback": "Farmer",
   "@farmerNameFallback": {
     "description": "Fallback display name for signed-in users with no name"
+  },
+  "profileTitle": "Profile & Settings",
+  "@profileTitle": {
+    "description": "Profile & Settings screen heading"
+  },
+  "profileSubtitle": "Manage your farmer profile and app preferences.",
+  "@profileSubtitle": {
+    "description": "Profile & Settings screen subtitle"
+  },
+  "farmerProfileSectionTitle": "Farmer Profile",
+  "@farmerProfileSectionTitle": {
+    "description": "Section heading for the farmer profile card"
+  },
+  "editProfileButton": "Edit Profile",
+  "@editProfileButton": {
+    "description": "Button to enter profile edit mode"
+  },
+  "saveProfileButton": "Save",
+  "@saveProfileButton": {
+    "description": "Button to save profile edits"
+  },
+  "cancelButton": "Cancel",
+  "@cancelButton": {
+    "description": "Generic cancel button, used in profile editing"
+  },
+  "nameFieldLabel": "Full Name",
+  "@nameFieldLabel": {
+    "description": "Profile form field label"
+  },
+  "stateFieldLabel": "State",
+  "@stateFieldLabel": {
+    "description": "Profile form field label"
+  },
+  "districtFieldLabel": "District",
+  "@districtFieldLabel": {
+    "description": "Profile form field label"
+  },
+  "landSizeFieldLabel": "Land Size (acres)",
+  "@landSizeFieldLabel": {
+    "description": "Profile form field label, acres"
+  },
+  "primaryCropsFieldLabel": "Primary Crops",
+  "@primaryCropsFieldLabel": {
+    "description": "Profile form field label"
+  },
+  "primaryCropsHint": "Type a crop and press enter",
+  "@primaryCropsHint": {
+    "description": "Hint text for the primary-crops chip input"
+  },
+  "organicDefaultLabel": "Do you usually use organic/bio-based inputs?",
+  "@organicDefaultLabel": {
+    "description": "Profile form question about standing organic-input preference"
+  },
+  "yesLabel": "Yes",
+  "@yesLabel": {
+    "description": "Generic Yes option, used in profile and scan forms"
+  },
+  "noLabel": "No",
+  "@noLabel": {
+    "description": "Generic No option, used in profile and scan forms"
+  },
+  "notSureLabel": "Not sure",
+  "@notSureLabel": {
+    "description": "Generic Not sure option, used in profile and scan forms"
+  },
+  "profileSavedConfirmation": "Profile saved",
+  "@profileSavedConfirmation": {
+    "description": "Snackbar shown after saving the farmer profile"
+  },
+  "noProfileYetTitle": "Set up your farmer profile",
+  "@noProfileYetTitle": {
+    "description": "Empty-state title shown before a farmer profile is set up"
+  },
+  "noProfileYetHint": "Add your state, land size, and crops so KrishiNetra can tailor scheme matches and recommendations to you.",
+  "@noProfileYetHint": {
+    "description": "Empty-state description shown before a farmer profile is set up"
+  },
+  "statePickerHint": "Select your state",
+  "@statePickerHint": {
+    "description": "Placeholder for the state dropdown in the profile form"
+  },
+  "schemesStateMismatchWarning": "This scheme list currently covers Maharashtra. Your profile state is {state}, so results below may not apply directly.",
+  "@schemesStateMismatchWarning": {
+    "description": "Schemes screen banner when the farmer's profile state isn't Maharashtra. {state} placeholder"
   }
 }

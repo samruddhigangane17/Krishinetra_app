@@ -1466,6 +1466,12 @@ class _ListenToReportButtonState extends State<_ListenToReportButton> {
   @override
   void dispose() {
     reportTtsService.removeListener(_onTtsStateChanged);
+    // Stop speaking on the way out — otherwise navigating away mid-report
+    // leaves the audio playing in the background with no control left on
+    // screen to stop it (this button no longer exists to tap).
+    if (reportTtsService.isSpeaking) {
+      reportTtsService.stop();
+    }
     super.dispose();
   }
 

@@ -110,6 +110,26 @@ class AppLocalizations {
   String get signOut => _t('signOut');
   String get guestFarmerName => _t('guestFarmerName');
   String get farmerNameFallback => _t('farmerNameFallback');
+  String get profileTitle => _t('profileTitle');
+  String get profileSubtitle => _t('profileSubtitle');
+  String get farmerProfileSectionTitle => _t('farmerProfileSectionTitle');
+  String get editProfileButton => _t('editProfileButton');
+  String get saveProfileButton => _t('saveProfileButton');
+  String get cancelButton => _t('cancelButton');
+  String get nameFieldLabel => _t('nameFieldLabel');
+  String get stateFieldLabel => _t('stateFieldLabel');
+  String get districtFieldLabel => _t('districtFieldLabel');
+  String get landSizeFieldLabel => _t('landSizeFieldLabel');
+  String get primaryCropsFieldLabel => _t('primaryCropsFieldLabel');
+  String get primaryCropsHint => _t('primaryCropsHint');
+  String get organicDefaultLabel => _t('organicDefaultLabel');
+  String get yesLabel => _t('yesLabel');
+  String get noLabel => _t('noLabel');
+  String get notSureLabel => _t('notSureLabel');
+  String get profileSavedConfirmation => _t('profileSavedConfirmation');
+  String get noProfileYetTitle => _t('noProfileYetTitle');
+  String get noProfileYetHint => _t('noProfileYetHint');
+  String get statePickerHint => _t('statePickerHint');
 
   String resendOtpIn(String seconds) =>
       _t('resendOtpIn').replaceAll('{seconds}', seconds);
@@ -117,6 +137,8 @@ class AppLocalizations {
       _t('codeSentTo').replaceAll('{phone}', phone);
   String welcomeBack(String name) =>
       _t('welcomeBack').replaceAll('{name}', name);
+  String schemesStateMismatchWarning(String state) =>
+      _t('schemesStateMismatchWarning').replaceAll('{state}', state);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

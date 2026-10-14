@@ -10,6 +10,7 @@ import 'package:krishinetra/core/services/weather_service.dart';
 import 'package:krishinetra/core/theme/app_theme.dart';
 import 'package:krishinetra/features/auth/presentation/pages/splash_screen.dart';
 import 'package:krishinetra/features/landing/landing_page.dart';
+import 'package:krishinetra/features/profile/data/farmer_profile_service.dart';
 import 'package:krishinetra/l10n/app_localizations.dart';
 
 Future<void> main() async {
@@ -24,6 +25,9 @@ Future<void> main() async {
   // soft — a returning farmer just sees an empty trend chart rather than
   // a startup crash if storage is unavailable.
   await reportHistoryStore.hydrate();
+  // Restore the farmer's standing profile (state, land size, crops,
+  // organic-input default) — same fail-soft contract as the other two.
+  await farmerProfileService.hydrate();
   // Kick off a weather fetch immediately (not awaited) so the Home tab
   // and Weather tab likely already have real data by the time the
   // farmer navigates to them, instead of every screen showing its own

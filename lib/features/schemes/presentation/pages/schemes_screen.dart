@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:krishinetra/core/services/report_history_store.dart';
 import 'package:krishinetra/core/theme/app_theme.dart';
+import 'package:krishinetra/features/profile/data/farmer_profile_service.dart';
 import 'package:krishinetra/features/recommendation/domain/models/soil_models.dart';
 import 'package:krishinetra/features/schemes/data/scheme_repository.dart';
 import 'package:krishinetra/features/schemes/domain/models/scheme.dart';
@@ -9,6 +10,7 @@ import 'package:krishinetra/features/schemes/domain/scheme_match_engine.dart';
 import 'package:krishinetra/features/schemes/presentation/widgets/recommended_scheme_card.dart';
 import 'package:krishinetra/features/schemes/presentation/widgets/scheme_filter_bar.dart';
 import 'package:krishinetra/features/schemes/presentation/widgets/scheme_list_card.dart';
+import 'package:krishinetra/l10n/app_localizations.dart';
 
 /// Intelligent, searchable scheme matching screen — replaces the old
 /// static 8-scheme reference list with the full 100-scheme dataset
@@ -104,7 +106,35 @@ class _SchemesScreenState extends State<SchemesScreen> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         _Header(compact: compact, schemeCount: allSchemes.length),
-                        const SizedBox(height: 22),
+                        const SizedBox(height: 16),
+
+                        if (farmerProfileService.profile?.state != null &&
+                            farmerProfileService.profile!.state != 'Maharashtra')
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 16),
+                            child: Container(
+                              padding: const EdgeInsets.all(14),
+                              decoration: BoxDecoration(
+                                color: AppColors.mustard.withOpacity(.12),
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(color: AppColors.mustard.withOpacity(.4)),
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Icon(Icons.warning_amber_rounded, color: AppColors.mustard),
+                                  const SizedBox(width: 10),
+                                  Expanded(
+                                    child: Text(
+                                      AppLocalizations.of(context)
+                                          .schemesStateMismatchWarning(farmerProfileService.profile!.state!),
+                                      style: const TextStyle(color: AppColors.textPrimary, height: 1.4),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
 
                         if (report == null)
                           _NoReportBanner()

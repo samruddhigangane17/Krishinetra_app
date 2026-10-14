@@ -10,6 +10,8 @@ import 'package:krishinetra/core/widgets/branded_logo_header.dart';
 import 'package:krishinetra/core/widgets/radar_pulse_loader.dart';
 import 'package:krishinetra/core/widgets/ui_kit.dart';
 import 'package:krishinetra/features/auth/domain/models/language_model.dart';
+import 'package:krishinetra/features/profile/data/farmer_profile_service.dart';
+import 'package:krishinetra/features/profile/domain/models/farmer_profile.dart';
 import 'package:krishinetra/features/recommendation/data/gemini_service.dart';
 import 'package:krishinetra/features/recommendation/domain/models/soil_models.dart';
 import 'package:krishinetra/features/recommendation/presentation/pages/recommendation_report_screen.dart';
@@ -49,6 +51,19 @@ class _SoilScanScreenState extends State<SoilScanScreen> {
   String? _errorMessage;
 
   final List<FertilizerHistoryEntry> _fertilizerHistory = [];
+
+  @override
+  void initState() {
+    super.initState();
+    // Prefill from the farmer's standing profile, if one exists — the
+    // farmer can still change either per scan, since actual practice for
+    // a given field/season can differ from their general default.
+    final FarmerProfile? profile = farmerProfileService.profile;
+    _usesOrganicInputs = profile?.usesOrganicInputs;
+    if (profile != null && profile.primaryCrops.isNotEmpty) {
+      _cropController.text = profile.primaryCrops.first;
+    }
+  }
 
   bool get _hasCompleteNpk =>
       _nController.text.isNotEmpty &&
